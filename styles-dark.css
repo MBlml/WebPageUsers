@@ -152,7 +152,7 @@
   
   
   
-  .ok {
+  .signOk {
     width: 34%;
     padding: 12px;
     background-color: green;
@@ -161,12 +161,9 @@
     margin: auto;
     text-align: center;
     border-radius: 5px;
-
-    opacity: 0;
-    animation: fade-in-out 3s ease-in-out;
   }
   
-  .bad {
+  .signBad {
     width: 34%;
     padding: 12px;
     background-color: red;
@@ -175,10 +172,29 @@
     margin: auto;
     text-align: center;
     border-radius: 5px;
-
-    opacity: 0;
-    animation: fade-in-out 3s ease-in-out;
-}
+  }
+  
+  .sesionOk {
+    width: 34%;
+    padding: 12px;
+    background-color: green;
+    color: white;
+    box-shadow: 3px 3px 8px black;
+    margin: auto;
+    text-align: center;
+    border-radius: 5px;
+  }
+  
+  .sesionBad {
+    width: 34%;
+    padding: 12px;
+    background-color: red;
+    color: white;
+    box-shadow: 3px 3px 8px black;
+    margin: auto;
+    text-align: center;
+    border-radius: 5px;
+  }
 
 @keyframes fade-in-out {
   0%, 100% {

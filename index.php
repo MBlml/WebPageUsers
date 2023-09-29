@@ -92,12 +92,12 @@
                     $consulta = "INSERT INTO users(name, lastName, email, password, fecha_reg) VALUES ('$name', '$lastName','$email','$password','$fechareg')";
                     $resultado = mysqli_query($conex,$consulta);
                     if ($resultado) {
-                        echo '<h3 class="ok">¡Registrado correctamente!</h3>';
+                        echo '<h3 class="signOk">¡Registrado correctamente!</h3>';
                     } else {
-                        echo '<h3 class="bad">¡Error!</h3>';
+                        echo '<h3 class="signBad">¡Error!</h3>';
                     }
                 } else {
-                    echo '<h3 class="bad">¡Completa todos los campos!</h3>';
+                    echo '<h3 class="signBad">¡Completa todos los campos!</h3>';
                 }
             }
             ?>
@@ -119,7 +119,8 @@
                     <label for="password">Password:</label>
                     <input type="password" id="password" name="passwordLog" style="width: 250px;">
                 </div>
-                <a href="images/iconPage.ico">Forgot password?</a><br>
+                <a href="./forgotPassword.php">Forgot password?</a><br>
+
                 <input type="submit" value="Log in">
             </form>
 
@@ -143,15 +144,16 @@
                         /* if (password_verify($passwordLog, $hashed_password)) { */
                         if ($passwordLog == $hashed_password) {
                             // Contraseña válida, mostrar alerta exitosa
-                            echo '<h3 class="ok">¡Inicio de sesión exitoso!</h3>';
+                            echo '<h3 class="sesionOk">¡Inicio de sesión exitoso!</h3>';    
+                            echo '<script>window.location.href = "./home.php";</script>';
                         } else {
                             // Contraseña incorrecta, mostrar alerta de error
-                            echo '<h3 class="bad">¡Contraseña incorrecta!</h3>';
+                            echo '<h3 class="sesionBad">¡Contraseña incorrecta!</h3>';
                             
                         }
                     } else {
                         // No se encontró el usuario, mostrar alerta de error
-                        echo '<h3 class="bad">¡No se encontraron usuarios!</h3>';
+                        echo '<h3 class="sesionBad">¡No se encontraron usuarios!</h3>';
                     }
                 }
             ?>

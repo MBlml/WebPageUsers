@@ -144,7 +144,7 @@ input[type="submit"] {
 
 
 
-.ok {
+.signOk {
   width: 34%;
   padding: 12px;
   background-color: green;
@@ -155,7 +155,29 @@ input[type="submit"] {
   border-radius: 5px;
 }
 
-.bad {
+.signBad {
+  width: 34%;
+  padding: 12px;
+  background-color: red;
+  color: white;
+  box-shadow: 3px 3px 8px black;
+  margin: auto;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.sesionOk {
+  width: 34%;
+  padding: 12px;
+  background-color: green;
+  color: white;
+  box-shadow: 3px 3px 8px black;
+  margin: auto;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.sesionBad {
   width: 34%;
   padding: 12px;
   background-color: red;

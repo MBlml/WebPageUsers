@@ -18,6 +18,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (password_verify($passwordLog, $hashed_password)) {
             // Contraseña válida, mostrar alerta exitosa
             echo '<script>alert("Inicio de sesión exitoso");</script>';
+            // Redirigir al usuario a otra_pagina.php
+            echo '<script>window.location.href = "./otra_pagina.php";</script>';
         } else {
             // Contraseña incorrecta, mostrar alerta de error
             echo '<script>alert("Contraseña incorrecta");</script>';
